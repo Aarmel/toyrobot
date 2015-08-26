@@ -6,12 +6,12 @@ Description:
   * There are no other obstructions on the table surface.
   * The robot is free to roam around the surface of the table, but must be prevented from falling to destruction. Any movement that would result in the robot falling from the table must be prevented, however further valid movement commands must still be allowed.
 
-  * Create an application that can read in commands of the following form -
-PLACE X,Y,F
-MOVE
-LEFT
-RIGHT
-REPORT
+  * Create an application that can read in commands of the following form -<br/>
+PLACE X,Y,F<br/>
+MOVE<br/>
+LEFT<br/>
+RIGHT<br/>
+REPORT<br/>
 
   * PLACE will put the toy robot on the table in position X,Y and facing NORTH, SOUTH, EAST or WEST. 
   * The origin (0,0) can be considered to be the SOUTH WEST most corner.
@@ -30,33 +30,33 @@ Any move that would cause the robot to fall must be ignored.
 
 ###Example Input and Output:
 a)
-PLACE 0,0,NORTH
-MOVE
-REPORT
-Output: 0,1,NORTH
+PLACE 0,0,NORTH<br/>
+MOVE<br/>
+REPORT<br/>
+Output: 0,1,NORTH<br/>
 
 b)
-PLACE 0,0,NORTH
-LEFT
-REPORT
-Output: 0,0,WEST
+PLACE 0,0,NORTH<br/>
+LEFT<br/>
+REPORT<br/>
+Output: 0,0,WEST<br/>
 
 c)
-PLACE 1,2,EAST
-MOVE
-MOVE
-LEFT
-MOVE
-REPORT
-Output: 3,3,NORTH
+PLACE 1,2,EAST<br/>
+MOVE<br/>
+MOVE<br/>
+LEFT<br/>
+MOVE<br/>
+REPORT<br/>
+Output: 3,3,NORTH<br/>
 
 ## Usage
-Run 
-ruby bin/ToyRobotSimulator.rb
+Run <br/>
+ruby bin/ToyRobotSimulator.rb<br/>
 Toy robot simulator will read from STDIN. It will time out if you do not type anything and exit. Alternatively you can type the command 'quit'.
 
 ## Specs
-Run from the main directory 
+Run from the main directory <br/>
 rspec
 
 ## licence
