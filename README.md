@@ -52,7 +52,7 @@ Output: 3,3,NORTH<br/>
 
 ## Usage
 Run <br/>
-ruby bin/ToyRobotSimulator.rb<br/>
+ruby bin/toy_robot_simulator.rb<br/>
 Toy robot simulator will read from STDIN. It will time out if you do not type anything and exit. Alternatively you can type the command 'quit'.
 
 ## Specs

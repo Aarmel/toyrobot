@@ -1,18 +1,17 @@
-# As class_eval is used to make any class that includes the state_machine will have the 
+# As class_eval is used to make any class that includes the state_machine will have the
 # Direction State machine included as if it was inline
-# 
+#
 # class MyClass
 #   include DirectionStateMachineclass
 # end
 #
 # m = MyClass.new
 # m.NORTH
-# 
+#
 module DirectionStateMachine
   def self.included(base)
     base.class_eval do
-      state_machine :direction, :initial => :none do
-
+      state_machine :direction, initial: :none do
         event :NORTH do
           transition all => :NORTH
         end

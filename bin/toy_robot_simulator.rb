@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+# !/usr/bin/env ruby
 #
 # See README.md
 #
@@ -11,13 +11,13 @@ puts 'Start'
 
 begin
   while line != "quit\n"
-    status = Timeout::timeout(20) do
+    Timeout::timeout(20) do
       line = ARGF.readline
     end
-    robot.processCommand(line)
+    robot.process_command(line)
   end
 rescue Timeout::Error
   puts 'Input timed out.'
 end
 
-puts "Bye!"
+puts 'Bye!'
